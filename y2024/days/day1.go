@@ -25,16 +25,18 @@ func Day1() utils.Day {
 
 	sort.Ints(d.leftColumn)
 	sort.Ints(d.rightColumn)
+
 	return d
 }
 
 func (d day1) SolvePart1() string {
 	total := 0
+
 	for i := range d.leftColumn {
 		total += mathutils.Abs(d.leftColumn[i] - d.rightColumn[i])
 	}
-	return strconv.Itoa(total)
 
+	return strconv.Itoa(total)
 }
 
 func (d day1) SolvePart2() string {
@@ -49,5 +51,6 @@ func (d day1) SolvePart2() string {
 	for _, num := range d.leftColumn {
 		total += num * counts[num]
 	}
+
 	return strconv.Itoa(total)
 }
