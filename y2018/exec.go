@@ -25,7 +25,7 @@ var (
 		16: days.Day16(),
 		// 17: days.Day17(),
 		// 18: days.Day18(),
-		// 19: days.Day19(),
+		19: days.Day19(),
 		// 20: days.Day20(),
 		// 21: days.Day21(),
 		// 22: days.Day22(),

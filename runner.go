@@ -8,11 +8,14 @@ import (
 )
 
 func main() {
-	Run(y2024.Days[1])
+	Run(y2024.Days[2])
 
 }
 
 func Run(d utils.Day) {
+	if d == nil {
+		panic(`Day not found`)
+	}
 	fmt.Printf("Part1: %s\n", d.SolvePart1())
 	fmt.Printf("Part2: %s\n", d.SolvePart2())
 }

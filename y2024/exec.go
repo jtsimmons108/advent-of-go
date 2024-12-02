@@ -8,7 +8,7 @@ import (
 var (
 	Days = map[int]utils.Day{
 		1: days.Day1(),
-		// 2:  days.Day2(),
+		2: days.Day2(),
 		// 3:  days.Day3(),
 		// 4:  days.Day4(),
 		// 5:  days.Day5(),

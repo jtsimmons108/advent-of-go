@@ -8,15 +8,15 @@ type Device struct {
 	Registers []int
 }
 
-func NewDevice() *Device {
+func NewDevice(registers int) *Device {
 	return &Device{
-		Registers: make([]int, 4),
+		Registers: make([]int, registers),
 	}
 }
 
 func (d *Device) SetRegisters(regs []int) error {
-	if len(regs) != 4 {
-		return errors.New(`registers must have length of 4`)
+	if len(regs) != len(d.Registers) {
+		return errors.New(`registers not the correct length`)
 	}
 
 	d.Registers = regs

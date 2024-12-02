@@ -1,7 +1,6 @@
 package days
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 
@@ -17,7 +16,7 @@ type day16 struct {
 
 func Day16() utils.Day {
 	d := day16{}
-	d.device = internal.NewDevice()
+	d.device = internal.NewDevice(4)
 	d.instructions = utils.ConvertInputToStringSlice(utils.DayInput(2018, 16), "\n")
 	d.possibleMatches = map[int]map[internal.Operation]struct{}{}
 	return d
@@ -78,14 +77,12 @@ func (d day16) SolvePart2() string {
 		}
 	}
 
-	fmt.Printf("%v", matched)
-
 	i := 0
 	for ; strings.HasPrefix(d.instructions[i], "Before"); i += 4 {
 	}
 
 	i += 2
-	device := internal.NewDevice()
+	device := internal.NewDevice(4)
 
 	for ; i < len(d.instructions); i++ {
 		line := utils.ExtractInts(d.instructions[i], false)
