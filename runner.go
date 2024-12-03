@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	Run(y2024.Days[2])
+	Run(y2024.Days[3])
 
 }
 

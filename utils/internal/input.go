@@ -65,3 +65,8 @@ func ExtractInts(input string, includeNegatives bool) []int {
 
 	return ints
 }
+
+func FindAllOccurrences(input string, pattern string) []string {
+	regex := regexp.MustCompile(pattern)
+	return regex.FindAllString(input, -1)
+}
