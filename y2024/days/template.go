@@ -15,7 +15,7 @@ func DayX() utils.Day {
 
 func (d dayX) SolvePart1() string {
 
-	return ``
+	return `Wired`
 }
 
 func (d dayX) SolvePart2() string {
